@@ -20,7 +20,10 @@ export class ReverbService {
     return this.reverbValue.asObservable();
   }
 
-  constructor(private audioContext: AudioContext, private http: HttpClient) {
+  constructor(
+    private audioContext: AudioContext,
+    private http: HttpClient,
+  ) {
     this.convolver = this.audioContext.createConvolver();
     this.dryGain = this.audioContext.createGain();
     this.wetGain = this.audioContext.createGain();
@@ -31,7 +34,7 @@ export class ReverbService {
     this.convolver.connect(this.wetGain);
 
     this.http
-      .get('/assets/ir/big_hall.wav', {
+      .get('./assets/ir/big_hall.wav', {
         responseType: 'arraybuffer',
       })
       .subscribe((buffer) => {
