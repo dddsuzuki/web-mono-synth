@@ -1,0 +1,67 @@
+<div>
+  <form [formGroup]="lfoForm">
+    <div>
+      <div>Waveform</div>
+      <select formControlName="type">
+        <option *ngFor="let option of waveformOptions" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mt-4">
+      <div class="flex justify-between">
+        <div>Rate</div>
+        <div>{{ lfoForm.value.rate }}</div>
+      </div>
+      <div class="flex justify-between px-[6px]">
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+      </div>
+      <input
+        type="range"
+        class="input-range"
+        formControlName="rate"
+        min="0"
+        max="20"
+        value="0"
+        step="0.1"
+      />
+    </div>
+
+    <div class="mt-4">
+      <div class="flex justify-between">
+        <div>Depth</div>
+        <div>{{ lfoForm.value.depth }}</div>
+      </div>
+      <div class="flex justify-between px-[6px]">
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+      </div>
+      <input
+        type="range"
+        class="input-range"
+        formControlName="depth"
+        min="0"
+        max="100"
+        value="0"
+        step="0.1"
+      />
+    </div>
+
+    <div class="mt-4">
+      <div>Target</div>
+      <select formControlName="target">
+        <option *ngFor="let option of targetOptions" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+    </div>
+  </form>
+</div>
