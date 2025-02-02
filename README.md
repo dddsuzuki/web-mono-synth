@@ -2,6 +2,8 @@
 
 A simple monophonic synthesizer that runs directly in your web browser. This app was created as a project to learn and understand the mechanics of synthesizers.
 
+https://dddsuzuki.github.io/web-mono-synth/
+
 ## Features
 
 - **Web-Based:** Runs entirely in your browser, no installation required.
