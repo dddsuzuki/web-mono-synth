@@ -1,0 +1,95 @@
+<div>
+  <form [formGroup]="egForm">
+    <div>
+      <div class="flex justify-between">
+        <div>Attack</div>
+        <div>{{ egForm.value.attack }}</div>
+      </div>
+      <div class="flex justify-between px-[6px]">
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+      </div>
+      <input
+        type="range"
+        class="input-range"
+        formControlName="attack"
+        min="0"
+        max="1"
+        value="1.0"
+        step="0.01"
+      />
+    </div>
+
+    <div class="mt-4">
+      <div class="flex justify-between">
+        <div>Decay</div>
+        <div>{{ egForm.value.decay }}</div>
+      </div>
+      <div class="flex justify-between px-[6px]">
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+      </div>
+      <input
+        type="range"
+        class="input-range"
+        formControlName="decay"
+        min="0"
+        max="1"
+        value="0.5"
+        step="0.01"
+      />
+    </div>
+
+    <div class="mt-4">
+      <div class="flex justify-between">
+        <div>Sustain</div>
+        <div>{{ egForm.value.sustain }}</div>
+      </div>
+      <div class="flex justify-between px-[6px]">
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+      </div>
+      <input
+        type="range"
+        class="input-range"
+        formControlName="sustain"
+        min="0"
+        max="1"
+        value="0.5"
+        step="0.01"
+      />
+    </div>
+
+    <div class="mt-4">
+      <div class="flex justify-between">
+        <div>Release</div>
+        <div>{{ egForm.value.release }}</div>
+      </div>
+      <div class="flex justify-between px-[6px]">
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+      </div>
+      <input
+        type="range"
+        class="input-range"
+        formControlName="release"
+        min="0"
+        max="1"
+        value="0.5"
+        step="0.01"
+      />
+    </div>
+  </form>
+</div>

@@ -1,0 +1,72 @@
+<div>
+  <form [formGroup]="delayForm">
+    <div>
+      <div class="flex justify-between">
+        <div>Level</div>
+        <div>{{ delayForm.value.level }}</div>
+      </div>
+      <div class="flex justify-between px-[6px]">
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+      </div>
+      <input
+        type="range"
+        class="input-range"
+        formControlName="level"
+        min="0"
+        max="1"
+        value="0"
+        step="0.01"
+      />
+    </div>
+
+    <div class="mt-4">
+      <div class="flex justify-between">
+        <div>Time</div>
+        <div>{{ delayForm.value.time }}</div>
+      </div>
+      <div class="flex justify-between px-[6px]">
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+      </div>
+      <input
+        type="range"
+        class="input-range"
+        formControlName="time"
+        min="0"
+        max="0.5"
+        value="0"
+        step="0.01"
+      />
+    </div>
+
+    <div class="mt-4">
+      <div class="flex justify-between">
+        <div>Feedback</div>
+        <div>{{ delayForm.value.feedback }}</div>
+      </div>
+      <div class="flex justify-between px-[6px]">
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+        <div class="w-[1px] h-[8px] bg-black"></div>
+      </div>
+      <input
+        type="range"
+        class="input-range"
+        formControlName="feedback"
+        min="0"
+        max="0.5"
+        value="0"
+        step="0.01"
+      />
+    </div>
+  </form>
+</div>

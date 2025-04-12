@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-width: 1320px;
+}
+
+.input-range {
+  -webkit-appearance: none;
+  position: relative;
+  appearance: none;
+  cursor: pointer;
+  background: #cccccc;
+  height: 8px;
+  width: 100%;
+  padding: 0 0;
+  border: solid 1px #000000;
+  outline: 0;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-image: url('./assets/control.svg');
+    width: 11px;
+    height: 22px;
+  }
+
+  &::-moz-range-thumb {
+    background: #53aeff;
+    width: 11px;
+    height: 22px;
+    border: none;
+  }
+
+  &::-moz-focus-outer {
+    border: 0;
+  }
+}

@@ -1,0 +1,24 @@
+<div>
+  <form [formGroup]="masterGainForm">
+    <div class="flex justify-between">
+      <div>Volume</div>
+      <div>{{ masterGainForm.value.volume }}</div>
+    </div>
+    <div class="flex justify-between px-[6px]">
+      <div class="w-[1px] h-[8px] bg-black"></div>
+      <div class="w-[1px] h-[8px] bg-black"></div>
+      <div class="w-[1px] h-[8px] bg-black"></div>
+      <div class="w-[1px] h-[8px] bg-black"></div>
+      <div class="w-[1px] h-[8px] bg-black"></div>
+    </div>
+    <input
+      type="range"
+      class="input-range"
+      formControlName="volume"
+      min="0"
+      max="2"
+      value="1"
+      step="0.01"
+    />
+  </form>
+</div>

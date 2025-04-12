@@ -1,0 +1,128 @@
+<div class="flex p-4">
+  <div class="w-64 m-2">
+    <div class="border-4 rounded border-green-600 mb-4">
+      <div class="bg-green-600 text-white p-1">LFO 1</div>
+      <div class="flex flex-col">
+        <div class="p-4">
+          <app-lfo (update)="updateLfo(0, $event)"></app-lfo>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-4 rounded border-green-600 mb-4">
+      <div class="bg-green-600 text-white p-1">LFO 2</div>
+      <div class="p-4">
+        <app-lfo (update)="updateLfo(1, $event)"></app-lfo>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-64 m-2">
+    <div class="border-4 rounded border-cyan-600 mb-4">
+      <div class="bg-cyan-600 text-white p-1">Oscillator 1</div>
+      <div class="flex flex-col">
+        <div class="p-4">
+          <app-oscillator
+            (update)="updateOscillator(0, $event)"
+          ></app-oscillator>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-4 rounded border-cyan-600">
+      <div class="bg-cyan-600 text-white p-1">Oscillator 2</div>
+      <div class="p-4">
+        <app-oscillator (update)="updateOscillator(1, $event)"></app-oscillator>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-64 m-2">
+    <div class="border-4 rounded border-gray-600 mb-4">
+      <div class="bg-gray-600 text-white p-1">Mixer</div>
+      <div class="p-4">
+        @if (mixerValue) {
+          <app-mixer
+            [value]="mixerValue"
+            (update)="updateMixer($event)"
+          ></app-mixer>
+        }
+      </div>
+    </div>
+
+    <div class="border-4 rounded border-gray-600 mb-4">
+      <div class="bg-gray-600 text-white p-1">Noise</div>
+      <div class="p-4">
+        <app-noise (update)="updateNoise($event)"></app-noise>
+      </div>
+    </div>
+
+    <div class="border-4 rounded border-gray-100">
+      <div class="bg-gray-100 text-gray-600 p-1">README</div>
+      <div class="p-4 text-sm text-gray-600">
+        Enter the following keys to play the notes:<br />
+        [z] = C, [s] = C#, [x] = D, [d] = D#, [c] = E, [v] = F, [g] = F#, [b] =
+        G, [h] = G#, [n] = A, [j] = A#, [m] = B, [,] = C<br />
+      </div>
+    </div>
+  </div>
+
+  <div class="w-64 m-2">
+    <div class="border-4 rounded border-gray-600 mb-4">
+      <div class="bg-gray-600 text-white p-1">Filter</div>
+      <app-filter
+        [value]="filterValue"
+        (update)="updateFilter($event)"
+      ></app-filter>
+    </div>
+
+    <div class="border-4 rounded border-gray-600 mb-4">
+      <div class="bg-gray-600 text-white p-1">Amplitude</div>
+      <div class="p-4">
+        <app-envelope-generator
+          [value]="amplitudeValue"
+          (update)="updateAmplitude($event)"
+        ></app-envelope-generator>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-64 m-2">
+    <div class="border-4 rounded border-red-600 mb-4">
+      <div class="bg-red-600 text-white p-1">Master</div>
+      <div class="p-4">
+        <app-master
+          [value]="masterValue"
+          (update)="updateMaster($event)"
+        ></app-master>
+      </div>
+    </div>
+    <div class="border-4 rounded border-gray-600 mb-4">
+      <div class="bg-gray-600 text-white p-1">Delay</div>
+      <div class="p-4">
+        <app-delay
+          [value]="delayValue"
+          (update)="updateDelay($event)"
+        ></app-delay>
+      </div>
+    </div>
+    <div class="border-4 rounded border-gray-600 mb-4">
+      <div class="bg-gray-600 text-white p-1">Reverb</div>
+      <div class="p-4">
+        <app-reverb
+          [value]="reverbValue"
+          (update)="updateReverb($event)"
+        ></app-reverb>
+      </div>
+    </div>
+    <div class="border-4 rounded border-gray-600 mb-4">
+      <div class="bg-gray-600 text-white p-1">Controller</div>
+      <div class="p-4">
+        <app-controller
+          [value]="controllerValue"
+          (update)="updateController($event)"
+        ></app-controller>
+      </div>
+    </div>
+  </div>
+</div>

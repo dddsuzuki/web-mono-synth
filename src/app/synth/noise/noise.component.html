@@ -1,0 +1,17 @@
+<div>
+  <form [formGroup]="noiseForm">
+    <div>
+      <div>Type</div>
+      <select formControlName="type">
+        <option *ngFor="let option of noiseTypeOptions" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mt-2">
+      <div>Active</div>
+      <input type="checkbox" formControlName="active" />
+    </div>
+  </form>
+</div>
